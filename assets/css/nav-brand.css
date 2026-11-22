@@ -1,0 +1,17 @@
+/* Personal signature, visually separate from the four navigation actions. */
+.floating-nav .nav-brand {
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ flex-shrink:0;
+ width:47px;
+ height:35px;
+ margin-right:5px;
+ padding-right:10px;
+ border-right:1px solid #294b8e35;
+}
+.floating-nav .nav-brand img { display:block; width:30px; height:30px; object-fit:contain; }
+@media(max-width:440px) {
+ .floating-nav .nav-brand { width:39px; margin-right:2px; padding-right:7px; }
+ .floating-nav .nav-brand img { width:27px; height:27px; }
+}

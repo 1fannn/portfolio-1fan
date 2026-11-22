@@ -1,0 +1,22 @@
+/* Local open-source variable font for body copy and supporting text. */
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("../fonts/bricolage-grotesque.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 200 800;
+  font-display: swap;
+}
+
+body {
+  font-optical-sizing: auto;
+}
+
+.intro-description,
+.timeline-description,
+.project-info p,
+.project-dialog p,
+.project-dialog li,
+.life-copy p,
+.contact-intro p {
+  line-height: 1.75;
+}

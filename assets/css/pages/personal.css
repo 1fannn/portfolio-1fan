@@ -1,0 +1,225 @@
+/* Personal life and contact pages share the existing paper-and-ink palette. */
+.personal-main {
+  min-height: calc(100svh - 220px);
+  padding-top: 82px;
+}
+
+.personal-main h1 {
+  font-size: clamp(40px, 5vw, 64px);
+}
+
+.life-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 380px) minmax(0, 1fr);
+  align-items: center;
+  gap: 100px;
+  margin-top: 52px;
+}
+
+.life-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 3px 3px 90px 3px;
+}
+
+.life-copy h2,
+.contact-intro h2 {
+  font-size: clamp(28px, 3vw, 38px);
+  max-width: 14ch;
+}
+
+.life-copy p,
+.contact-intro p {
+  max-width: 34ch;
+  margin-top: 24px;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.life-copy .journal-note {
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 70px;
+  align-items: start;
+  margin-top: 100px;
+  padding-bottom: 70px;
+}
+
+.email-address {
+  display: inline-block;
+  font-size: clamp(24px, 3vw, 36px);
+  line-height: 1.35;
+  letter-spacing: -.04em;
+  font-weight: 700;
+  color: var(--ink);
+  overflow-wrap: anywhere;
+}
+
+.email-address:hover {
+  text-decoration: underline;
+  text-underline-offset: 7px;
+}
+
+.email-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 22px;
+  margin-top: 28px;
+}
+
+.copy-email {
+  border: 0;
+  background: transparent;
+  padding: 12px 0;
+  color: var(--ink);
+  font-size: 14px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.copy-status {
+  min-height: 28px;
+  margin-top: 8px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.contact-socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  margin-top: 28px;
+}
+
+.contact-socials a {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 44px;
+  font-size: 14px;
+  color: var(--ink);
+}
+
+.contact-socials a:hover {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+@media (max-width: 768px) {
+  .personal-main { padding-top: 52px; }
+  .life-layout { gap: 45px; }
+  .contact-layout { grid-template-columns: 1fr; gap: 35px; margin-top: 54px; }
+}
+
+@media (max-width: 540px) {
+  .personal-main { padding-top: 42px; }
+  .life-layout { grid-template-columns: 1fr; gap: 32px; margin-top: 32px; }
+  .life-photo { max-width: 340px; }
+  .life-copy p { font-size: 16px; }
+  .contact-layout { margin-top: 42px; padding-bottom: 20px; }
+}
+
+/* Personal introduction and the values behind the work. */
+.life-layout { align-items: start; gap: clamp(36px, 5vw, 72px); }
+.life-copy p { max-width: 52ch; margin-top: 20px; font-size: 16px; line-height: 1.8; }
+.life-copy p:first-child { margin-top: 0; }
+.personal-values { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; margin-top: 54px; }
+.personal-values h2 { font: 400 clamp(18px, 2vw, 24px)/1.5 var(--font-pixel); color: var(--ink); }
+.personal-values p { max-width: 48ch; margin-top: 16px; font-size: 16px; line-height: 1.8; }
+@media(max-width: 740px) {
+  .life-layout { grid-template-columns: 1fr; gap: 32px; }
+  .life-photo { max-width: 340px; }
+  .life-copy p { max-width: 60ch; }
+  .personal-values { grid-template-columns: 1fr; gap: 30px; margin-top: 38px; }
+}
+
+/* Volunteering belongs to the personal story on About Me. */
+.personal-volunteering { margin-top: 66px; }
+.personal-volunteering > h3 { font: 400 clamp(20px, 2.3vw, 28px)/1.5 var(--font-pixel); color: var(--ink); }
+.volunteer-entry { display: grid; grid-template-columns: 210px minmax(0, 1fr); gap: 32px; margin-top: 28px; padding-top: 26px; border-top: 1px solid var(--line); }
+.volunteer-date { color: var(--muted); font-size: 14px; line-height: 1.8; }
+.volunteer-copy h4 { color: var(--ink); font-size: 21px; line-height: 1.5; }
+.volunteer-role { margin-top: 7px; color: var(--muted); font-size: 14px; }
+.volunteer-copy ul { padding-left: 20px; margin-top: 18px; max-width: 65ch; font-size: 16px; line-height: 1.8; }
+.volunteer-copy li + li { margin-top: 12px; }
+@media(max-width:740px) {
+ .personal-volunteering { margin-top: 44px; }
+ .volunteer-entry { grid-template-columns: 1fr; gap: 12px; margin-top: 22px; padding-top: 22px; }
+ .volunteer-copy h4 { font-size: 19px; }
+}
+
+/* Free-time interests share one parent section and a consistent subsection level. */
+.free-time-section { margin-top: 76px; }
+.free-time-section > h2 {
+  font: 400 clamp(24px, 2.6vw, 32px)/1.5 var(--font-pixel);
+  color: var(--ink);
+}
+.free-time-section .personal-volunteering { margin-top: 34px; }
+.free-time-section .personal-volunteering > h3 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font: 600 21px/1.5 var(--font);
+  color: var(--ink);
+}
+.free-time-section .personal-volunteering > h3::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  flex-shrink: 0;
+  background: var(--pink);
+  box-shadow: 3px 3px 0 #294b8e30;
+}
+.free-time-section .volunteer-entry { margin-top: 18px; padding-top: 22px; }
+@media(max-width:740px) {
+ .free-time-section { margin-top: 50px; }
+ .free-time-section .personal-volunteering { margin-top: 26px; }
+ .free-time-section .personal-volunteering > h3 { font-size: 19px; }
+}
+
+/* One activity card within In My Free Time. */
+.free-time-section .personal-volunteering {
+  position: relative;
+  margin-top: 30px;
+  padding: 30px 32px 32px;
+  border: 1px solid var(--ink);
+  border-radius: 0;
+  background: #f7f3eb;
+  box-shadow: 6px 6px 0 #e5adbf;
+}
+.free-time-section .personal-volunteering > h3 {
+  font: 400 18px/1.5 var(--font-pixel);
+}
+.free-time-section .volunteer-entry {
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-top: 22px;
+  padding-top: 20px;
+  border-top: 1px dashed #294b8e40;
+}
+.free-time-section .volunteer-date {
+  color: var(--muted);
+  font-size: 13px;
+}
+.free-time-section .volunteer-copy h4 {
+  font-size: clamp(19px, 2vw, 24px);
+}
+.free-time-section .volunteer-copy ul {
+  max-width: 78ch;
+  margin-top: 18px;
+}
+@media(max-width:740px) {
+  .free-time-section .personal-volunteering {
+    padding: 24px 22px;
+    margin-top: 24px;
+    box-shadow: 4px 4px 0 #e5adbf;
+  }
+  .free-time-section .personal-volunteering > h3 { font-size: 16px; }
+}

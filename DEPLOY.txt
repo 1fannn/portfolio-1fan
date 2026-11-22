@@ -1,0 +1,26 @@
+ZHANG YIFAN PORTFOLIO — DEPLOYMENT PACKAGE
+
+这个文件夹是完整的网站与 Node.js 留言后台，不需要前端构建或 npm 安装。
+未包含本地留言数据库、备份、测试记录、私人简历或原始文档。
+
+方式一：Docker（推荐用于服务器）
+1. 将整个文件夹上传至支持 Docker Compose 的服务器。
+2. 在本文件夹执行：docker compose up -d --build
+3. 访问 http://服务器地址:8788
+4. 正式域名通过服务器反向代理配置 HTTPS，代理到 8788 端口。
+5. 留言保存在 guestbook-data 持久化卷中。更新应用时保留此卷；不要执行 docker compose down -v。
+
+方式二：Node.js 主机
+1. 使用 Node.js 24 LTS。
+2. 运行命令：npm start
+3. 环境变量 HOST=0.0.0.0；PORT 使用平台提供的端口。
+4. 为留言数据库挂载可写持久磁盘，将 GUESTBOOK_DB 设为该磁盘下的 guestbook.sqlite 完整路径。
+5. 若未设 GUESTBOOK_DB，默认写入 .data/guestbook.sqlite。无持久磁盘的主机重部署后会丢失留言。
+
+本地预览：安装 Node.js 24 后，在此文件夹执行 npm start，打开 http://localhost:8788。
+
+入口：index.html（转入 home.html），四个主页面位于 home.html 和 pages/。
+公共留言 API：/api/comments；与网页由同一服务提供，无需跨域配置。
+联系表单使用 mailto：打开访客邮件应用，需访客确认发送，没有自动邮件发送服务。
+本包可部署，但尚未上传或发布到公网。域名和 HTTPS 需在所选主机配置。
+纯静态托管可显示页面，但不支持当前的公共留言后台；请部署完整 Node 服务。

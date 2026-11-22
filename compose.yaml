@@ -1,0 +1,14 @@
+services:
+  portfolio:
+    build: .
+    ports:
+      - "8788:8788"
+    environment:
+      HOST: 0.0.0.0
+      PORT: 8788
+      GUESTBOOK_DB: /app/.data/guestbook.sqlite
+    volumes:
+      - guestbook-data:/app/.data
+    restart: unless-stopped
+volumes:
+  guestbook-data:

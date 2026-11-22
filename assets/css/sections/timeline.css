@@ -1,0 +1,151 @@
+.timeline {
+  max-width: 760px;
+  margin-inline: auto
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 150px 28px 1fr;
+  gap: 18px;
+  position: relative;
+  padding-bottom: 44px
+}
+
+.timeline-item:last-child {
+  padding-bottom: 0
+}
+
+.timeline-date {
+  font-size: 13px;
+  color: var(--muted);
+  padding-top: 3px
+}
+
+.timeline-marker {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding-top: 8px
+}
+
+.timeline-marker::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  bottom: -53px;
+  width: 1px;
+  background: var(--line)
+}
+
+.timeline-item:last-child .timeline-marker::before {
+  display: none
+}
+
+.timeline-marker::after {
+  content: "";
+  width: 7px;
+  height: 7px;
+  background: var(--ink);
+  border-radius: 50%;
+  z-index: 1
+}
+
+.timeline-copy h3 {
+  font-size: 19px;
+  letter-spacing: -.025em
+}
+
+.timeline-subtitle {
+  margin-top: 6px;
+  font-size: 14px;
+  color: var(--ink)
+}
+
+.timeline-description {
+  font-size: 15px;
+  line-height: 1.7;
+  margin-top: 13px;
+  max-width: 46ch;
+  color: var(--muted)
+}
+
+.education-timeline .timeline-item {
+  grid-template-columns: 1fr 28px 1fr;
+  min-height: 125px
+}
+
+.education-timeline .timeline-date {
+  grid-column: 3;
+  grid-row: 1
+}
+
+.education-timeline .timeline-marker {
+  grid-column: 2;
+  grid-row: 1
+}
+
+.education-timeline .timeline-copy {
+  grid-column: 1;
+  grid-row: 1;
+  text-align: right
+}
+
+.education-timeline .timeline-item:nth-child(even) .timeline-date {
+  grid-column: 1;
+  text-align: right
+}
+
+.education-timeline .timeline-item:nth-child(even) .timeline-copy {
+  grid-column: 3;
+  text-align: left
+}
+
+.education-timeline .timeline-description {
+  font-size: 14px
+}
+
+@media(max-width:600px) {
+
+  .timeline-item,
+  .education-timeline .timeline-item {
+    grid-template-columns: 18px 1fr;
+    gap: 8px 16px;
+    min-height: 0;
+    padding-bottom: 35px
+  }
+
+  .timeline-item .timeline-marker,
+  .education-timeline .timeline-item .timeline-marker {
+    grid-column: 1;
+    grid-row: 1 / span 2
+  }
+
+  .timeline-item .timeline-date,
+  .education-timeline .timeline-item .timeline-date,
+  .education-timeline .timeline-item:nth-child(even) .timeline-date {
+    grid-column: 2;
+    grid-row: 1;
+    text-align: left;
+    padding: 0
+  }
+
+  .timeline-item .timeline-copy,
+  .education-timeline .timeline-item .timeline-copy,
+  .education-timeline .timeline-item:nth-child(even) .timeline-copy {
+    grid-column: 2;
+    grid-row: 2;
+    text-align: left
+  }
+
+  .timeline-marker::before {
+    bottom: -43px
+  }
+
+  .timeline-copy h3 {
+    font-size: 19px
+  }
+
+  .timeline-description {
+    margin-top: 9px
+  }
+}

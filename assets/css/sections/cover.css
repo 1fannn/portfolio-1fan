@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+
+#earth-entry-preview {
+  --paper: #edeae2;
+  --ink: #294b8e;
+  --pink: #eb7e9f;
+  font-family: 'Silkscreen', 'Courier New', monospace;
+  color: var(--ink);
+  background: var(--paper);
+  container-type: inline-size
+}
+
+#earth-entry-preview * {
+  box-sizing: border-box
+}
+
+#earth-entry-preview .cover {
+  position: relative;
+  min-height: 500px;
+  height: 100svh;
+  aspect-ratio: auto;
+  overflow: hidden;
+  background: var(--paper)
+}
+
+#earth-entry-preview .wordmark {
+  position: absolute;
+  left: 7.5%;
+  top: 25%;
+  width: 58%;
+  z-index: 2
+}
+
+#earth-entry-preview h1 {
+  font: 400 clamp(38px, 9.1cqw, 97px)/.98 'Silkscreen', 'Courier New', monospace;
+  letter-spacing: -.085em;
+  margin: 0;
+  color: var(--ink)
+}
+
+#earth-entry-preview h1 span {
+  display: block;
+  white-space: nowrap
+}
+
+#earth-entry-preview .name {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 32px 0 0;
+  font: 400 clamp(11px, 1.6cqw, 16px)/1.5 'Silkscreen', 'Courier New', monospace;
+  letter-spacing: -.04em
+}
+
+#earth-entry-preview .name:before,
+#earth-entry-preview .name:after {
+  content: '';
+  height: 3px;
+  width: 24px;
+  background: var(--ink)
+}
+
+#earth-entry-preview .hello {
+  position: absolute;
+  z-index: 3;
+  left: 49%;
+  top: 9%;
+  width: 115px;
+  height: 85px;
+  display: grid;
+  place-items: center;
+  background: var(--pink);
+  color: var(--paper);
+  font: 400 19px/1 'Silkscreen', 'Courier New', monospace;
+  transform: rotate(9deg);
+  clip-path: polygon(50% 0, 57% 12%, 70% 3%, 72% 18%, 89% 14%, 85% 30%, 100% 35%, 89% 47%, 100% 58%, 83% 63%, 88% 80%, 71% 78%, 68% 96%, 54% 86%, 42% 100%, 37% 84%, 20% 93%, 21% 75%, 5% 76%, 14% 60%, 0 50%, 13% 39%, 2% 25%, 21% 25%, 18% 8%, 36% 16%)
+}
+
+#earth-entry-preview .stage {
+  position: absolute;
+  right: 15%;
+  bottom: 16%;
+  height: 69%;
+  aspect-ratio: 629/1210;
+  pointer-events: none;
+  z-index: 1
+}
+
+#earth-entry-preview .character {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transform-origin: 50% 90%;
+  image-rendering: auto
+}
+
+#earth-entry-preview .character[hidden] {
+  display: none
+}
+
+#earth-entry-preview .spark {
+  position: absolute;
+  background: var(--pink);
+  clip-path: polygon(40% 0, 60% 0, 60% 33%, 100% 33%, 100% 57%, 65% 57%, 65% 100%, 40% 100%, 40% 65%, 0 65%, 0 40%, 40% 40%);
+  width: 48px;
+  height: 48px;
+  transform: rotate(14deg);
+  pointer-events: none
+}
+
+#earth-entry-preview .spark-a {
+  right: 5%;
+  bottom: 21%;
+  width: 74px;
+  height: 74px;
+  transform: rotate(18deg);
+  z-index: 2
+}
+
+#earth-entry-preview .spark-b {
+  left: 5.5%;
+  top: 32%;
+  width: 29px;
+  height: 29px;
+  z-index: 3
+}
+
+@media(max-width:520px) {
+  #earth-entry-preview .cover {
+    min-height: 600px;
+    aspect-ratio: auto
+  }
+
+  #earth-entry-preview .wordmark {
+    left: 8%;
+    top: 18%;
+    width: 84%
+  }
+
+  #earth-entry-preview h1 {
+    font-size: clamp(37px, 11cqw, 57px)
+  }
+
+  #earth-entry-preview .name {
+    margin-top: 22px;
+    font-size: 12px;
+    gap: 8px
+  }
+
+  #earth-entry-preview .hello {
+    top: 3%;
+    left: auto;
+    right: 8%;
+    width: 89px;
+    height: 66px;
+    font-size: 15px
+  }
+
+  #earth-entry-preview .stage {
+    height: 39%;
+    bottom: 6%;
+    right: 22%
+  }
+
+  #earth-entry-preview .spark-a {
+    right: 7%;
+    bottom: 10%;
+    width: 52px;
+    height: 52px
+  }
+
+  #earth-entry-preview .spark-b {
+    left: 5%;
+    top: 27%;
+    width: 22px;
+    height: 22px
+  }
+}
+
+#earth-entry-preview .entry {
+  position: absolute;
+  left: 50.5%;
+  top: 81%;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+  min-width: 142px;
+  height: 54px;
+  padding: 0 22px;
+  border: 0;
+  border-radius: 0;
+  background: var(--ink);
+  color: var(--paper);
+  box-shadow: 4px 0 0 var(--ink), -4px 0 0 var(--ink), 0 4px 0 var(--ink), 0 -4px 0 var(--ink), 7px 7px 0 var(--pink);
+  font: 400 18px/1 'Silkscreen', 'Microsoft YaHei', sans-serif;
+  letter-spacing: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  opacity: 1
+}
+
+#earth-entry-preview .entry span {
+  font-size: 24px;
+  line-height: 1;
+  color: var(--pink)
+}
+
+@media(max-width:520px) {
+  #earth-entry-preview .entry {
+    left: 29%;
+    top: 75%;
+    min-width: 118px;
+    height: 48px;
+    font-size: 16px;
+    padding: 0 16px;
+    gap: 10px
+  }
+}
+
+#earth-entry-preview .stage {
+  pointer-events: auto;
+  cursor: pointer;
+  transform-origin: 50% 100%;
+  touch-action: manipulation
+}
+
+#earth-entry-preview .stage:focus-visible {
+  outline: 2px dashed var(--pink);
+  outline-offset: 8px
+}
+
+@media(prefers-reduced-motion:reduce) {
+  #earth-entry-preview .stage {
+    will-change: auto
+  }
+}
+
+/* Cover and portfolio are consecutive sections of the same document. */
+#earth-entry-preview {
+  width: 100%;
+  min-height: 100svh;
+}
+
+#earth-entry-preview .cover {
+  width: 100%;
+  margin: 0;
+}
+
+.home-connected .about-section {
+  scroll-margin-top: 0;
+}
+
+/* Keep the original portrait-intro scale after making it a section heading. */
+.intro-copy #about-title {
+  font-size: clamp(42px, 4.5vw, 62px);
+  max-width: none;
+}
+
+.home-connected .floating-nav {
+  transition: opacity .2s ease, visibility .2s ease;
+}
+
+.home-connected[data-cover-active] .floating-nav {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .intro-copy #about-title { font-size: 45px; }
+}
+
+@media (max-width: 540px) {
+  .intro-copy #about-title { font-size: 46px; }
+}
+
+
+/* Isolate the cover letters from the content-page wordmark accent. */
+#earth-entry-preview h1 span {
+  color: var(--ink);
+}
