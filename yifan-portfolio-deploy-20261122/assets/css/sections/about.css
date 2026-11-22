@@ -1,0 +1,169 @@
+.about-section {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  align-items: center;
+  gap: 90px;
+  min-height: 580px;
+  padding: 54px 45px 85px
+}
+
+.intro-copy h1 {
+  font-size: clamp(42px, 4.5vw, 62px);
+  max-width: 9ch
+}
+
+.intro-copy h1 span {
+  display: block
+}
+
+.intro-role {
+  font-size: 19px;
+  color: var(--ink);
+  font-weight: 600;
+  margin-top: 23px
+}
+
+.intro-description {
+  max-width: 37ch;
+  margin-block: 14px 28px;
+  color: var(--muted)
+}
+
+.portrait {
+  width: min(100%, 310px);
+  justify-self: end
+}
+
+.portrait-placeholder {
+  height: 350px;
+  background: #e6dfdc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  color: var(--ink);
+  border-radius: 3px 3px 90px 3px
+}
+
+.portrait-placeholder svg {
+  width: 76px;
+  height: 90px;
+  stroke: var(--ink);
+  stroke-width: 1.2;
+  opacity: .5
+}
+
+.portrait-placeholder span {
+  font-size: 14px
+}
+
+.portrait img {
+  display: block;
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 3px 3px 90px 3px
+}
+
+.portrait figcaption {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 15px;
+  text-align: center
+}
+
+@media(max-width:768px) {
+  .about-section {
+    padding: 42px 0 55px;
+    gap: 35px;
+    min-height: 490px
+  }
+
+  .intro-copy h1 {
+    font-size: 45px
+  }
+
+  .portrait-placeholder,
+  .portrait img {
+    height: 290px
+  }
+}
+
+@media(max-width:540px) {
+  .about-section {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding-top: 35px
+  }
+
+  .intro-copy h1 {
+    font-size: 46px;
+    max-width: none
+  }
+
+  .intro-copy h1 span {
+    display: inline
+  }
+
+  .intro-role {
+    margin-top: 18px
+  }
+
+  .intro-description {
+    max-width: 36ch
+  }
+
+  .portrait {
+    justify-self: center;
+    width: 100%;
+    max-width: 310px
+  }
+
+  .portrait-placeholder,
+  .portrait img {
+    height: 280px
+  }
+
+  .portrait-placeholder {
+    border-radius: 3px 3px 70px 3px
+  }
+
+  .portrait figcaption {
+    margin-top: 10px
+  }
+}
+
+/* Intro social links: local SVGs, matching the blue outline style. */
+.intro-socials {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.intro-socials a {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--ink);
+  border-radius: 8px;
+  color: var(--ink);
+  background: transparent;
+  transition: transform .2s var(--ease), background-color .2s, color .2s;
+}
+
+.intro-socials a:hover {
+  transform: translateY(-3px);
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.intro-socials a:active {
+  transform: translateY(1px);
+}
+
+.intro-socials svg {
+  width: 22px;
+  height: 22px;
+}

@@ -1,0 +1,250 @@
+/* A shared pixel accent layer. Body copy remains in the readable text face. */
+@font-face {
+  font-family: "Portfolio Pixel";
+  src: url("../fonts/silkscreen-regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+:root {
+  --font-pixel: "Portfolio Pixel", "Courier New", monospace;
+  --pixel-cut: polygon(0 8px, 8px 8px, 8px 0, calc(100% - 8px) 0,
+    calc(100% - 8px) 8px, 100% 8px, 100% calc(100% - 8px),
+    calc(100% - 8px) calc(100% - 8px), calc(100% - 8px) 100%,
+    8px 100%, 8px calc(100% - 8px), 0 calc(100% - 8px));
+}
+
+/* Motifs sit in the outer margins, behind content and outside pointer events. */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image: url("../images/pixel-margin-left.svg"), url("../images/pixel-margin-right.svg");
+  background-size: 64px 600px, 64px 600px;
+  background-position: 24px 34px, calc(100% - 24px) 34px;
+  background-repeat: repeat-y;
+}
+
+.section-heading h1,
+.section-heading h2,
+.personal-main h1,
+.intro-copy #about-title,
+.life-copy h2,
+.contact-intro h2 {
+  font-family: var(--font-pixel);
+  font-weight: 400;
+  letter-spacing: -.055em;
+  line-height: 1.25;
+}
+
+.section-heading h1,
+.section-heading h2 {
+  font-size: clamp(25px, 2.7vw, 34px);
+}
+
+.personal-main h1 {
+  font-size: clamp(34px, 4.4vw, 58px);
+}
+
+.intro-copy #about-title {
+  font-size: clamp(32px, 3.7vw, 49px);
+}
+
+.intro-copy .name-button {
+  font-family: var(--font-pixel);
+  font-weight: 400;
+  font-size: clamp(24px, 2.6vw, 34px);
+  letter-spacing: -.065em;
+}
+
+.life-copy h2,
+.contact-intro h2 {
+  font-size: clamp(24px, 2.2vw, 30px);
+  max-width: 18ch;
+}
+
+.section-heading h1::after,
+.section-heading h2::after,
+.personal-main h1::after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 16px;
+  width: 16px;
+  height: 16px;
+  background: var(--pink);
+  clip-path: polygon(33% 0, 66% 0, 66% 33%, 100% 33%, 100% 66%,
+    66% 66%, 66% 100%, 33% 100%, 33% 66%, 0 66%, 0 33%, 33% 33%);
+}
+
+.primary-link,
+.filter,
+.copy-email,
+.project-open {
+  font-family: var(--font-pixel);
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: -.045em;
+}
+
+.primary-link,
+.filter,
+.intro-socials a,
+.dialog-close {
+  border-radius: 0;
+}
+
+.primary-link,
+.filter.active {
+  box-shadow: 3px 3px 0 var(--pink);
+}
+
+.primary-link:hover,
+.filter:hover,
+.intro-socials a:hover {
+  transition-timing-function: steps(2, end);
+}
+
+.project-card,
+.project-dialog {
+  border-radius: 0;
+  clip-path: var(--pixel-cut);
+}
+
+.project-card {
+  border: 1px solid color-mix(in srgb, var(--ink) 16%, transparent);
+}
+
+.project-info h3,
+.timeline-copy h3 {
+  letter-spacing: -.025em;
+}
+
+.portrait img,
+.life-photo img {
+  border-radius: 0;
+  clip-path: var(--pixel-cut);
+}
+
+.floating-nav {
+  border-radius: 4px;
+  border: 1px solid color-mix(in srgb, var(--ink) 23%, transparent);
+  box-shadow: 4px 4px 0 color-mix(in srgb, var(--pink) 52%, transparent);
+}
+
+.floating-nav a,
+.floating-nav a span {
+  border-radius: 2px;
+}
+
+.timeline-marker::after {
+  border-radius: 0;
+}
+
+/* Keep the original cover and its lettering, including offline font support. */
+#earth-entry-preview h1,
+#earth-entry-preview .name,
+#earth-entry-preview .hello,
+#earth-entry-preview .entry {
+  font-family: var(--font-pixel);
+}
+
+@media (max-width: 1180px) {
+  body::after {
+    background-size: 28px 600px, 28px 600px;
+    background-position: 3px 34px, calc(100% - 3px) 34px;
+  }
+}
+
+@media (max-width: 540px) {
+  body::after {
+    background-size: 17px 460px, 17px 460px;
+    background-position: 0 25px, 100% 25px;
+  }
+
+  .intro-copy #about-title { font-size: clamp(29px, 8vw, 36px); }
+  .intro-copy .name-button { font-size: clamp(22px, 6.4vw, 28px); }
+  .primary-link { gap: 12px; padding-inline: 16px; }
+  .filter { padding-inline: 9px; font-size: 11px; }
+  .section-heading h1::after,
+  .section-heading h2::after,
+  .personal-main h1::after { width: 12px; height: 12px; margin-left: 10px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .primary-link,
+  .filter,
+  .intro-socials a { transition: none; }
+}
+
+
+/* Goodbye Crewel World trial: personal display text only. */
+@font-face {
+  font-family: "Crewel Display";
+  src: url("../fonts/goodbye-crewel-world.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+.intro-copy .name-button {
+  font-family: var(--font-pixel);
+  font-size: clamp(24px, 2.6vw, 34px);
+  font-weight: 400;
+  letter-spacing: -.045em;
+  line-height: 1.3;
+}
+
+body[data-page="about"] .personal-main h1 {
+  font-family: "Crewel Display", var(--font-pixel);
+  font-size: clamp(48px, 6vw, 82px);
+  font-weight: 400;
+  letter-spacing: .015em;
+  line-height: 1.15;
+}
+
+@media (max-width: 540px) {
+  .intro-copy .name-button {
+    font-size: clamp(22px, 6.4vw, 28px);
+    letter-spacing: -.045em;
+  }
+}
+
+
+/* Use the standard Arial ampersand in every site font, including dynamic dialogs. */
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: local("Arial"), local("Helvetica"), local("Liberation Sans");
+  font-style: normal;
+  font-weight: 100 900;
+  unicode-range: U+0026;
+}
+
+@font-face {
+  font-family: "Portfolio Pixel";
+  src: local("Arial"), local("Helvetica"), local("Liberation Sans");
+  font-style: normal;
+  font-weight: 100 900;
+  unicode-range: U+0026;
+}
+
+@font-face {
+  font-family: "Crewel Display";
+  src: local("Arial"), local("Helvetica"), local("Liberation Sans");
+  font-style: normal;
+  font-weight: 100 900;
+  unicode-range: U+0026;
+}
+
+
+/* Clear, bold slash separators within both pixel and body text. */
+.text-slash {
+  display: inline-block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  font-size: 1.08em;
+  line-height: 1;
+}

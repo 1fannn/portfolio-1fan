@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta content="About Me — Zhang Yifan’s personal portfolio." name="description"/>
+  <meta content="#edeae2" name="theme-color"/>
+  <title>
+   About Me — Zhang Yifan
+  </title>
+  <link href="../assets/images/favicon.svg" rel="icon" type="image/svg+xml"/>
+  <link href="../assets/css/main.css" rel="stylesheet"/>
+  <link href="../assets/css/pages/personal.css" rel="stylesheet"/>
+  <script defer="" src="../assets/js/content.js">
+  </script>
+  <script defer="" src="../assets/js/app.js">
+  </script>
+  <link href="../assets/css/pixel-theme.css" rel="stylesheet"/>
+  <link href="../assets/css/pages/guestbook.css" rel="stylesheet"/>
+  <script defer="" src="../assets/js/guestbook.js">
+  </script>
+  <link href="../assets/css/nav-brand.css" rel="stylesheet"/>
+  <link href="../assets/css/mouse-spotlight.css" rel="stylesheet"/>
+  <script defer src="../assets/js/mouse-spotlight.js"></script>
+  <link href="../assets/css/pages/free-time.css" rel="stylesheet"/>
+  <script defer src="../assets/js/free-time.js"></script>
+ </head>
+ <body data-page="about" data-root="../">
+  <a class="skip-link" href="#main">
+   Skip to content
+  </a>
+<main class="personal-main" id="main">
+   <section aria-labelledby="life-title" class="life-section">
+    <h1 id="life-title">
+     About me
+    </h1>
+    <div class="life-layout">
+     <figure class="life-photo">
+      <img alt="Yifan holding a plush toy in a shop filled with soft toys" height="1706" src="../assets/images/profile/myself.jpg" width="1279"/>
+     </figure>
+     <div class="life-copy">
+      <p>I am an Information Technology student at Republic Polytechnic, specialising in Full Stack Development. I enjoy turning ideas into websites and exploring how technology and design can make everyday tasks easier.</p>
+      <p>Beyond my studies, I love clean, simple design and cute cartoon characters. I’m drawn to designs that feel clear and comfortable, with small, playful details that give them personality. This website is a space to bring those interests together and share both my projects and a little of my life.</p>
+      <p>I’m open to internship and collaboration opportunities where I can contribute, learn from others and grow through hands-on experience. Through school projects and part-time work, I’ve learned to value teamwork, take responsibility and stay patient when challenges arise.</p>
+     </div>
+    </div>
+    <div class="personal-values">
+     <section aria-labelledby="mission-title">
+      <h2 id="mission-title">My mission</h2>
+      <p>To keep learning and create useful, thoughtful experiences that bring ease and a little joy to everyday life.</p>
+     </section>
+     <section aria-labelledby="vision-title">
+      <h2 id="vision-title">My vision</h2>
+      <p>To become a developer who combines technical skills with creativity, building work that helps people and reflects my personality.</p>
+     </section>
+    </div>
+   </section>
+   <section class="free-time-section" aria-labelledby="free-time-title">
+    <div class="free-time-layout">
+     <div class="free-time-overview">
+      <h2 id="free-time-title">In My Free Time</h2>
+      <div id="activity-caption" class="activity-caption"></div>
+      <div class="activity-controls">
+       <span id="activity-position" class="activity-position" aria-live="polite">01 / 01</span>
+       <div id="activity-step-controls" hidden>
+        <button id="activity-previous" type="button" aria-label="Previous activity">↑</button>
+        <button id="activity-next" type="button" aria-label="Next activity">↓</button>
+       </div>
+      </div>
+     </div>
+     <div id="activity-drum" class="activity-drum" role="region" aria-label="Free time activities" tabindex="0"></div>
+    </div>
+   </section>
+   <section aria-labelledby="guestbook-title" class="guestbook-section">
+    <div class="guestbook-heading">
+     <h2 id="guestbook-title">
+      Leave a note
+     </h2>
+     <p id="guestbook-public-description">
+      Type a little hello, a thought, or a comment about my website. Your note will be public.
+     </p>
+    </div>
+    <div class="guestbook-layout">
+     <form class="typewriter-form" id="guestbook-form">
+      <div aria-label="Mint-green typewriter" class="typewriter">
+       <div class="tw-paper-stack">
+        <div class="tw-paper">
+         <div class="tw-paper-top">
+          <span>
+           Dear Yifan,
+          </span>
+          <span class="tw-counter" id="note-count">
+           0 / 1200
+          </span>
+         </div>
+         <label class="sr-only" for="guest-message">
+          Your public note to Yifan
+         </label>
+         <textarea aria-describedby="guestbook-public-description" id="guest-message" maxlength="1200" name="message" placeholder="Start typing here…" required="" rows="6"></textarea>
+        </div>
+       </div>
+       <div aria-hidden="true" class="tw-carriage">
+        <span>
+        </span>
+       </div>
+       <div class="tw-machine">
+        <div class="tw-machine-top">
+         <span class="tw-badge">
+          YIFAN’S
+          <br/>
+          POST OFFICE
+         </span>
+         <div class="tw-machine-tools">
+          <button aria-pressed="false" class="tw-tool" id="typewriter-sound" type="button">
+           Sound off
+          </button>
+          <button class="tw-tool" id="clear-note" type="button">
+           Clear
+          </button>
+         </div>
+        </div>
+        <div aria-label="On-screen typewriter keyboard" class="tw-keyboard">
+         <div class="tw-key-row">
+          <button aria-label="Q" class="tw-key" data-type-key="Q" tabindex="-1" type="button">
+           Q
+          </button>
+          <button aria-label="W" class="tw-key" data-type-key="W" tabindex="-1" type="button">
+           W
+          </button>
+          <button aria-label="E" class="tw-key" data-type-key="E" tabindex="-1" type="button">
+           E
+          </button>
+          <button aria-label="R" class="tw-key" data-type-key="R" tabindex="-1" type="button">
+           R
+          </button>
+          <button aria-label="T" class="tw-key" data-type-key="T" tabindex="-1" type="button">
+           T
+          </button>
+          <button aria-label="Y" class="tw-key" data-type-key="Y" tabindex="-1" type="button">
+           Y
+          </button>
+          <button aria-label="U" class="tw-key" data-type-key="U" tabindex="-1" type="button">
+           U
+          </button>
+          <button aria-label="I" class="tw-key" data-type-key="I" tabindex="-1" type="button">
+           I
+          </button>
+          <button aria-label="O" class="tw-key" data-type-key="O" tabindex="-1" type="button">
+           O
+          </button>
+          <button aria-label="P" class="tw-key" data-type-key="P" tabindex="-1" type="button">
+           P
+          </button>
+         </div>
+         <div class="tw-key-row">
+          <button aria-label="A" class="tw-key" data-type-key="A" tabindex="-1" type="button">
+           A
+          </button>
+          <button aria-label="S" class="tw-key" data-type-key="S" tabindex="-1" type="button">
+           S
+          </button>
+          <button aria-label="D" class="tw-key" data-type-key="D" tabindex="-1" type="button">
+           D
+          </button>
+          <button aria-label="F" class="tw-key" data-type-key="F" tabindex="-1" type="button">
+           F
+          </button>
+          <button aria-label="G" class="tw-key" data-type-key="G" tabindex="-1" type="button">
+           G
+          </button>
+          <button aria-label="H" class="tw-key" data-type-key="H" tabindex="-1" type="button">
+           H
+          </button>
+          <button aria-label="J" class="tw-key" data-type-key="J" tabindex="-1" type="button">
+           J
+          </button>
+          <button aria-label="K" class="tw-key" data-type-key="K" tabindex="-1" type="button">
+           K
+          </button>
+          <button aria-label="L" class="tw-key" data-type-key="L" tabindex="-1" type="button">
+           L
+          </button>
+         </div>
+         <div class="tw-key-row">
+          <button aria-label="Shift" class="tw-key tw-shift" data-type-key="Shift" tabindex="-1" type="button">
+           ⇧
+          </button>
+          <button aria-label="Z" class="tw-key" data-type-key="Z" tabindex="-1" type="button">
+           Z
+          </button>
+          <button aria-label="X" class="tw-key" data-type-key="X" tabindex="-1" type="button">
+           X
+          </button>
+          <button aria-label="C" class="tw-key" data-type-key="C" tabindex="-1" type="button">
+           C
+          </button>
+          <button aria-label="V" class="tw-key" data-type-key="V" tabindex="-1" type="button">
+           V
+          </button>
+          <button aria-label="B" class="tw-key" data-type-key="B" tabindex="-1" type="button">
+           B
+          </button>
+          <button aria-label="N" class="tw-key" data-type-key="N" tabindex="-1" type="button">
+           N
+          </button>
+          <button aria-label="M" class="tw-key" data-type-key="M" tabindex="-1" type="button">
+           M
+          </button>
+          <button aria-label="Backspace" class="tw-key tw-backspace" data-type-key="Backspace" tabindex="-1" type="button">
+           ⌫
+          </button>
+         </div>
+         <div class="tw-key-row">
+          <button aria-label="Space" class="tw-key tw-space" data-type-key="Space" tabindex="-1" type="button">
+           SPACE
+          </button>
+          <button aria-label="Enter" class="tw-key tw-enter" data-type-key="Enter" tabindex="-1" type="button">
+           ↵
+          </button>
+         </div>
+        </div>
+        <div class="tw-front-label">
+         A LITTLE NOTE GOES A LONG WAY
+        </div>
+       </div>
+      </div>
+      <div class="note-submit-row">
+       <div class="note-name">
+        <label for="guest-name">
+         Name
+         <span>
+          (optional)
+         </span>
+        </label>
+        <input autocomplete="nickname" id="guest-name" maxlength="50" name="name" placeholder="Anonymous"/>
+       </div>
+       <button class="primary-link note-submit" type="submit">
+        Post note
+       </button>
+      </div>
+      <p aria-live="polite" class="note-status" id="note-status" role="status">
+      </p>
+     </form>
+     <aside class="wall-preview" aria-labelledby="wall-preview-title">
+      <div class="wall-window-bar"><span>YIFAN / GUESTBOOK</span><span aria-hidden="true">− □ ×</span></div>
+      <div class="wall-preview-content">
+       <div class="wall-preview-heading"><h3 id="wall-preview-title">The note wall</h3><span id="wall-preview-total">0 notes</span></div>
+       <p class="wall-intro">Little hellos. Honest thoughts. A few words from you.</p>
+       <button type="button" class="wall-open" id="open-note-wall" aria-haspopup="dialog" aria-controls="note-wall-dialog">
+        <span class="wall-mini-board" id="wall-mini-board"><span class="wall-empty-preview">Your note could be the first one here.</span></span>
+        <span class="wall-open-label">Open the wall <span aria-hidden="true">＋</span></span>
+       </button>
+       <p class="wall-preview-status" id="wall-preview-status" aria-live="polite">Loading visitor notes…</p>
+      </div>
+     </aside>
+    </div>
+   </section>
+  </main>
+  <dialog class="note-wall-dialog" id="note-wall-dialog" aria-labelledby="wall-dialog-title">
+   <div class="wall-window-bar"><span id="wall-dialog-title">YIFAN / THE NOTE WALL</span><div class="wall-window-controls"><button type="button" id="maximize-note-wall" aria-label="Maximize note wall" aria-pressed="false">□</button><button type="button" id="close-note-wall" aria-label="Close note wall" autofocus>×</button></div></div>
+   <div class="wall-dialog-body"><p class="wall-dialog-intro">A little collection of words left by visitors.</p>
+     <div class="guestbook-wall">
+      <div class="notes-heading">
+       <h3 id="notes-title">
+        Visitor notes
+        <span id="note-total">
+        </span>
+       </h3>
+       <button class="notes-refresh" id="refresh-notes" type="button">
+        Refresh
+       </button>
+      </div>
+      <p class="notes-loading" id="notes-loading">
+       Loading notes…
+      </p>
+      <ol class="notes-list" id="notes-list">
+      </ol>
+      <button class="notes-more" hidden="" id="more-notes" type="button">
+       More notes
+      </button>
+     </div>
+   </div>
+  </dialog>
+  <dialog id="activity-dialog" class="activity-dialog" aria-labelledby="activity-dialog-title">
+   <div class="activity-dialog-bar"><span>YIFAN / OFF SCREEN</span><button id="activity-close" type="button" aria-label="Close activity introduction" autofocus>×</button></div>
+   <div id="activity-dialog-content" class="activity-dialog-content"></div>
+  </dialog>
+  <footer class="site-footer">
+   <p>
+    © Zhang Yifan
+    <span data-year="">
+     2026
+    </span>
+   </p>
+  </footer>
+  <nav aria-label="Main navigation" class="floating-nav">
+   <div class="nav-brand"><img src="../assets/images/yf-logo-simple.svg" alt="Zhang Yifan personal logo" width="30" height="30"/></div>
+   <a aria-label="Home" data-nav="home" href="../home.html#about">
+    <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" viewBox="0 0 24 24">
+     <path d="m3 11 9-8 9 8v10h-7v-7h-4v7H3Z">
+     </path>
+    </svg>
+    <span>
+     Home
+    </span>
+   </a>
+   <a aria-current="page" aria-label="About Me" data-nav="about" href="about.html">
+    <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" viewBox="0 0 24 24">
+     <circle cx="12" cy="8" r="3">
+     </circle>
+     <path d="M5 21v-2a7 7 0 0 1 14 0v2">
+     </path>
+    </svg>
+    <span>
+     About Me
+    </span>
+   </a>
+   <a aria-label="Projects" data-nav="projects" href="projects.html">
+    <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" viewBox="0 0 24 24">
+     <rect height="7" rx="1" width="7" x="3" y="3">
+     </rect>
+     <rect height="7" rx="1" width="7" x="14" y="3">
+     </rect>
+     <rect height="7" rx="1" width="7" x="3" y="14">
+     </rect>
+     <rect height="7" rx="1" width="7" x="14" y="14">
+     </rect>
+    </svg>
+    <span>
+     Projects
+    </span>
+   </a>
+   <a aria-label="Contact Me" data-nav="contact" href="contact.html">
+    <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" viewBox="0 0 24 24">
+     <rect height="14" rx="2" width="18" x="3" y="5">
+     </rect>
+     <path d="m3 7 9 6 9-6">
+     </path>
+    </svg>
+    <span>
+     Contact Me
+    </span>
+   </a>
+  </nav>
+ </body>
+</html>

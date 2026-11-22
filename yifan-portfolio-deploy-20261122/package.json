@@ -1,0 +1,13 @@
+{
+  "name": "yifan-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server/server.mjs",
+    "guestbook": "node server/server.mjs"
+  },
+  "engines": {
+    "node": ">=22.13.0"
+  }
+}

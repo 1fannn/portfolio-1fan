@@ -1,0 +1,283 @@
+.project-filters {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 35px
+}
+
+.filter {
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted);
+  padding: 7px 15px;
+  font-size: 13px;
+  transition: background .2s, color .2s
+}
+
+.filter:hover {
+  background: #294b8e09
+}
+
+.filter.active {
+  color: var(--paper);
+  background: var(--ink)
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px
+}
+
+.project-card {
+  min-width: 0;
+  background: var(--card);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform .25s var(--ease), box-shadow .25s
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px #2937500d
+}
+
+.project-cover {
+  height: 190px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: var(--cover, #dfdfdf);
+  color: var(--ink);
+  padding: 25px
+}
+
+.project-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover
+}
+
+.project-cover.has-image {
+  padding: 0
+}
+
+.cover-type {
+  font-size: 29px;
+  line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: -.055em;
+  max-width: 6ch
+}
+
+.project-card:nth-child(2) .cover-type {
+  font-style: italic
+}
+
+.project-info {
+  padding: 24px
+}
+
+.project-info h3 {
+  font-size: 20px
+}
+
+.project-info p {
+  margin-top: 12px;
+  font-size: 14px;
+  color: var(--muted)
+}
+
+.project-open {
+  border: 0;
+  background: none;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 700;
+  margin-top: 24px
+}
+
+.project-open:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px
+}
+
+.project-open svg {
+  width: 17px
+}
+
+.project-empty {
+  text-align: center;
+  color: var(--muted);
+  padding: 40px
+}
+
+.project-dialog {
+  border: 0;
+  border-radius: 18px;
+  padding: 45px;
+  color: var(--body);
+  background: var(--card);
+  width: min(590px, calc(100% - 32px));
+  max-height: 85svh;
+  overflow: auto;
+  box-shadow: 0 24px 80px #0002
+}
+
+.project-dialog::backdrop {
+  background: #17243a55;
+  backdrop-filter: blur(5px)
+}
+
+.dialog-close {
+  position: absolute;
+  right: 14px;
+  top: 12px;
+  width: 34px;
+  height: 34px;
+  background: transparent;
+  border: 0;
+  border-radius: 50%;
+  font-size: 26px;
+  color: var(--ink)
+}
+
+.dialog-close:hover {
+  background: #294b8e0b
+}
+
+.project-dialog h2 {
+  font-size: 30px;
+  margin: 15px 0 20px
+}
+
+.project-dialog p {
+  margin-block: 15px
+}
+
+.project-dialog h3 {
+  margin-top: 27px;
+  font-size: 17px
+}
+
+.dialog-category {
+  font-size: 13px;
+  color: var(--muted)
+}
+
+.dialog-links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 24px
+}
+
+.dialog-links a {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  color: var(--ink)
+}
+
+.dialog-note {
+  font-size: 13px;
+  color: var(--muted)
+}
+
+body.modal-open {
+  overflow: hidden
+}
+
+@media(max-width:850px) {
+  .project-grid {
+    gap: 16px
+  }
+
+  .project-info {
+    padding: 20px
+  }
+
+  .project-cover {
+    height: 160px
+  }
+}
+
+@media(max-width:620px) {
+  .project-grid {
+    grid-template-columns: 1fr
+  }
+
+  .project-cover {
+    height: 200px
+  }
+
+  .project-filters {
+    gap: 5px
+  }
+
+  .filter {
+    padding: 7px 10px;
+    font-size: 12px
+  }
+
+  .project-dialog {
+    padding: 40px 25px 25px
+  }
+
+  .project-dialog h2 {
+    font-size: 26px
+  }
+}
+
+
+/* Real project titles have a wider measure than the original placeholder words. */
+.project-cover .cover-type {
+  max-width: 12ch;
+  overflow-wrap: anywhere;
+}
+
+.project-highlights {
+  padding-left: 20px;
+  margin-block: 18px 24px;
+}
+
+.project-highlights li + li {
+  margin-top: 10px;
+}
+
+
+/* Real project screens retain their full contents inside a consistent frame. */
+.project-cover.has-image {
+  height: 215px;
+  background: #fff;
+  padding: 0;
+}
+
+.project-cover.has-image img {
+  object-fit: contain;
+  object-position: center;
+}
+
+.project-info .project-meta {
+  color: var(--ink);
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+@media (max-width: 850px) and (min-width: 621px) {
+  .project-cover.has-image { height: 155px; }
+}
+
+@media (max-width: 620px) {
+  .project-cover.has-image { height: auto; aspect-ratio: 16 / 10; }
+}
+
+/* Screenshots supplied with individual project presentations. */
+.project-gallery { margin: 26px 0; }
+.project-gallery img { display: block; width: 100%; height: auto; border: 1px solid var(--line); }

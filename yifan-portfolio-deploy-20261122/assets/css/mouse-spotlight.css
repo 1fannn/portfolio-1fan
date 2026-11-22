@@ -1,0 +1,22 @@
+.mouse-spotlight {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 64px;
+  height: 64px;
+  z-index: 2147483647;
+  border-radius: 50%;
+  pointer-events: none;
+  user-select: none;
+  opacity: 0;
+  background: radial-gradient(circle, #eb7e9f 0 1.5px, #eb7e9fcc 2px, #294b8e2b 8px, #294b8e10 18px, transparent 31px);
+  transition: opacity 140ms ease;
+  will-change: transform;
+}
+.mouse-spotlight.is-visible { opacity: 1; }
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  html.custom-light-cursor, html.custom-light-cursor * { cursor: none !important; }
+}
+@media (hover: none), (pointer: coarse), (prefers-reduced-motion: reduce) {
+  .mouse-spotlight { display: none; }
+}
