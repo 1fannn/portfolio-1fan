@@ -68,6 +68,9 @@
   wallObserver.observe(loading, { childList: true, subtree: true, characterData: true });
 
   const filePreview = location.protocol === 'file:';
+  const commentsEndpoint = location.hostname === '1fannn.github.io'
+    ? 'https://yifan-guestbook-api.vtrt9hvm9k.chatgpt.site/api/comments'
+    : '/api/comments';
   const DRAFT_KEY = 'yifan-public-note-draft';
   let nextBefore = null;
   let posting = false;
@@ -224,7 +227,7 @@
     const version = ++requestVersion;
     try {
       const query = append && nextBefore ? '?before=' + encodeURIComponent(nextBefore) : '';
-      const response = await fetch('/api/comments' + query, { cache: 'no-store', headers: { Accept: 'application/json' } });
+      const response = await fetch(commentsEndpoint + query, { cache: 'no-store', headers: { Accept: 'application/json' } });
       if (!response.ok) throw new Error('The note wall is offline. Please try again later.');
       const data = await response.json();
       if (!Array.isArray(data.comments)) throw new Error('The note wall is offline. Please try again later.');
@@ -261,7 +264,7 @@
     submit.textContent = 'Posting…';
     setStatus('Posting your note…');
     try {
-      const response = await fetch('/api/comments', {
+      const response = await fetch(commentsEndpoint, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify({ name: name.value.trim(), message: note })
