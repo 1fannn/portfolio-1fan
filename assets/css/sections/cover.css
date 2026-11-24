@@ -282,3 +282,45 @@
 #earth-entry-preview h1 span {
   color: var(--ink);
 }
+
+/* A pixel world for Yifan's original animated character. */
+#earth-entry-preview .character-world {
+  position:absolute; right:4%; bottom:16%; width:44%; height:70%; z-index:1;
+}
+#earth-entry-preview .world-backdrop {
+  position:absolute; inset:12px 14px 18px; background-color:#dbe3ed;
+  background-image:radial-gradient(#294b8e30 1px,transparent 1px); background-size:23px 23px;
+  clip-path:polygon(0 48px,24px 48px,24px 24px,48px 24px,48px 0,calc(100% - 48px) 0,calc(100% - 48px) 24px,calc(100% - 24px) 24px,calc(100% - 24px) 48px,100% 48px,100% 100%,0 100%);
+}
+#earth-entry-preview .world-sun {
+  position:absolute; right:11%; top:12%; width:64px; height:64px; background:#edb4c5;
+  clip-path:polygon(0 16px,16px 16px,16px 0,48px 0,48px 16px,64px 16px,64px 48px,48px 48px,48px 64px,16px 64px,16px 48px,0 48px);
+}
+#earth-entry-preview .character-world .stage {
+  inset:0 18% 18px; width:auto; height:auto; aspect-ratio:auto; z-index:2;
+}
+#earth-entry-preview .world-ground { position:absolute; bottom:8px; left:0; right:0; height:18px; background:var(--ink); box-shadow:0 9px 0 #b6c3d7; }
+#earth-entry-preview .world-ground::before { content:''; position:absolute; right:42px; bottom:18px; width:58px; height:18px; background:#9dafca; box-shadow:-23px -18px 0 #c0cbdd; }
+#earth-entry-preview .character-world .hello {
+  left:0; right:auto; top:13%; width:auto; height:auto; padding:15px 17px;
+  clip-path:none; background:var(--paper); color:var(--ink); border:2px solid var(--ink);
+  box-shadow:4px 4px 0 var(--pink); font-size:clamp(11px,1.2vw,16px); line-height:1.3;
+  transform:rotate(-5deg); white-space:nowrap; z-index:3;
+}
+#earth-entry-preview .character-world .hello::after { content:''; position:absolute; width:12px; height:12px; right:18px; bottom:-8px; background:var(--paper); border-right:2px solid var(--ink); border-bottom:2px solid var(--ink); transform:rotate(45deg); }
+#earth-entry-preview .entry { left:7.5%; top:auto; bottom:12%; transform:none; }
+#earth-entry-preview .spark-a { right:2%; bottom:23%; width:34px; height:34px; transform:none; }
+@media(max-width:740px) and (min-width:521px) {
+ #earth-entry-preview .character-world { width:43%; right:3%; }
+ #earth-entry-preview .character-world .hello { padding:11px; font-size:11px; left:-10px; }
+}
+@media(max-width:520px) {
+ #earth-entry-preview .cover { min-height:780px; }
+ #earth-entry-preview .wordmark { top:10%; }
+ #earth-entry-preview .character-world { width:84%; height:43%; right:8%; bottom:13%; }
+ #earth-entry-preview .character-world .hello { top:-8px; left:-7px; right:auto; padding:11px; font-size:11px; }
+ #earth-entry-preview .world-sun { width:48px; height:48px; transform:scale(.75); transform-origin:top right; }
+ #earth-entry-preview .entry { left:50%; top:auto; bottom:4%; transform:translateX(-50%); }
+ #earth-entry-preview .spark-a { right:4%; bottom:20%; width:25px; height:25px; }
+ #earth-entry-preview .spark-b { left:5%; top:5%; }
+}
