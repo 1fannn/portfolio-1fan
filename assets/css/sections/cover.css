@@ -324,3 +324,11 @@
  #earth-entry-preview .spark-a { right:4%; bottom:20%; width:25px; height:25px; }
  #earth-entry-preview .spark-b { left:5%; top:5%; }
 }
+
+/* Center only START beneath the visible welcome lettering. */
+@media (min-width:521px) {
+ #earth-entry-preview .entry {
+   left:calc(7.5% + min(9.1cqw, 97px) * 2.24);
+   transform:translateX(-50%);
+ }
+}
